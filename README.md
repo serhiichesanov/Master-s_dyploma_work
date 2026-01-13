@@ -4,6 +4,14 @@ In this repository implemented an ensemble of linear machine learning algorithms
 
 <img width="610" height="670" alt="image" src="https://github.com/user-attachments/assets/5a975373-245d-40ea-bc37-3a6e33ec4c05" />
 
+The proposed ensemble model is trained sequentially on the training data, which is first split from the test set. For each class, a one-vs-all subset is created with binary targets, producing as many subsets as classes. Each subset undergoes feature-wise and sample-wise normalization to ensure consistent scaling and robustness. Class-specific regressors are then trained on these subsets, with each model specializing in one class. During training, the minimum and maximum predictions of each regressor are recorded for later aggregation and decision-making. This approach efficiently trains a robust ensemble of lightweight regressors while handling class imbalance and feature scaling differences.
+
+# Inference
+
+<img width="621" height="495" alt="image" src="https://github.com/user-attachments/assets/2a658ce3-422a-4c01-b86b-ef779c5d423f" />
+
+The ensemble application algorithm works by first normalizing the input vector, then passing it through each of the pre-trained regressors. Each regressor’s output is normalized using stored min–max values to remove scale dependence. The final class is determined using a “winner-takes-all” approach, selecting the class with the highest normalized prediction. This process ensures robustness and generalizability to new data.
+ 
 # Dataset
 
 For testing and validation of the developed method, modeling was conducted on an extremely small
@@ -15,3 +23,14 @@ The dataset contains 73 samples of male patients hospitalized due to polytrauma.
 independent attributes covering a variety of clinical and laboratory indicators. The dependent variable
 is mortality, labeled as 1 (fatal case) and 0 (survival). Out of the total 73 cases, 31 were fatal, and 42
 survived.
+
+
+# Results
+
+To quantitatively evaluate the performance of the proposed ensemble algorithms, a series of experiments
+were conducted using various linear machine learning methods as weak predictors within the developed
+ensemble framework:
+• Algorithm 1 – proposed ensemble via SGTM neural-like structure.
+• Algorithm 2 – proposed ensemble via SVM with linear kernel.
+• Algorithm 3 – proposed ensemble via Ridge regression.
+<img width="521" height="673" alt="image" src="https://github.com/user-attachments/assets/8f1f56e4-5cd0-474f-84db-103681207e3d" />
