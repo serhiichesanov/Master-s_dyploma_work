@@ -27,10 +27,9 @@ survived.
 
 # Results
 
-To quantitatively evaluate the performance of the proposed ensemble algorithms, a series of experiments
-were conducted using various linear machine learning methods as weak predictors within the developed
-ensemble framework:
-• Algorithm 1 – proposed ensemble via SGTM neural-like structure.
-• Algorithm 2 – proposed ensemble via SVM with linear kernel.
-• Algorithm 3 – proposed ensemble via Ridge regression.
+To quantitatively evaluate the performance of the proposed ensemble algorithms, a series of experiments were conducted using various linear machine learning methods as weak predictors within the developed ensemble framework:
+
+- **Algorithm 1** – proposed ensemble via SGTM neural-like structure  
+- **Algorithm 2** – proposed ensemble via SVM with linear kernel  
+- **Algorithm 3** – proposed ensemble via Ridge regression
 <p align="center"><img width="521" height="673" alt="image" src="https://github.com/user-attachments/assets/8f1f56e4-5cd0-474f-84db-103681207e3d" /></p>
