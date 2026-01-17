@@ -1,5 +1,5 @@
 # Linear ensemble model with winner-takes-all aggregation strategy for improved small data classification
-In this repository implemented an ensemble of linear machine learning algorithms that constructs an ensemble of linear regressors, where a separate binarized regressor is trained for each class. After normalizing the output of each weak regressor, the final prediction is obtained using a winner-takes-all aggregation strategy. The method is evaluated on 3 real medical datasets collected in Ukrainian hospitals, which differ both in terms of the number of features and in terms of subject specificity.
+In this repository implemented an ensemble of linear machine learning algorithms that constructs an ensemble of linear regressors, where a separate binarized regressor is trained for each class. After normalizing the output of each weak regressor, the final prediction is obtained using a winner-takes-all aggregation strategy. The method is evaluated on a medical dataset containing records from 73 patients with polytrauma.
 # Training pipeline
 
 <p align="center"><img width="610" height="670" alt="image" src="https://github.com/user-attachments/assets/5a975373-245d-40ea-bc37-3a6e33ec4c05" /></p>
